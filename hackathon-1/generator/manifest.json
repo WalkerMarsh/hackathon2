@@ -1,0 +1,23 @@
+{
+  "manifest_version": 2,
+  "name": "Mood Moderator",
+  "version": "1.0",
+  "description": "Tell us how you wanna feel",
+  "content_scripts": [
+    {
+      "matches": [
+        "https://*/*"
+      ],
+      "js": [
+        "jquery.min.js",
+        "./main.js"
+      ]
+    }
+  ],
+  "permissions": [
+    "storage"
+  ],
+  "action": {
+    "default_popup": "popup.html"
+  }
+}
