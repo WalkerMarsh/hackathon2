@@ -1,12 +1,16 @@
 {
   "manifest_version": 2,
-  "name": "Focus",
+  "name": "Mood Moderator",
   "version": "1.0",
-  "description" : "mood moderator",
+  "description" : "let us moderate your mood",
+  "browser_action": {
+    "default_icon": "128.png"},
   "content_scripts": [
     {
-      "matches": ["https://www.youtube.com/*"],
+      "matches": ["https://github.com/*"], //only works for youtube
       "js": ["./main.js"]
     }
   ]
+  
+
 }

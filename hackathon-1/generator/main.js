@@ -1,11 +1,9 @@
  var i = document.body.childNodes.length - 1;
- while(i != -1){
+ while(i){
   document.body.removeChild(document.body.childNodes[i]);
   i--
  }
  
- document.addEventListener('DOMContentLoaded', () => {
-  console.log('hello')
   const sad = document.createElement('button');
   const happy = document.createElement('button');
   const idkYouTellMe = document.createElement('button');
@@ -14,7 +12,7 @@
 
   sad.setAttribute('id','sad');
   happy.setAttribute('id','happy');
-  idkYouTellMe.setAttribute('id','IdkYouTellMe');
+  idkYouTellMe.setAttribute('id','idkYouTellMe');
   motivated.setAttribute('id','motivated');
   annoyed.setAttribute('id','annoyed');
 
@@ -42,25 +40,25 @@ let feelingObj = {
 function getRandomInt(max) {
 return Math.floor(Math.random() * max);
 }
-
+console.log('1')
 
 document.getElementById('sad').addEventListener('click', function () {
   console.log('hello');
   // starts to rain maybe michael jordan crying face
-  let url = feelingObj['sad'][getRandomInt()]
-  document.getElementById('sad').setAttribute('href', url)
+  let url = feelingObj['sad'][0]
   window.open(url, "_self")
 })
+
 
 document.getElementById('happy').addEventListener('click', function () {
   //you won the lottery pops up ballons
-  let url = feelingObj['happy'][getRandomInt()]
+  let url = feelingObj['happy'][0]
   window.open(url, "_self")
 })
 
-document.getElementById('IdkYouTellMe').addEventListener('click', function () {
-  alert('what do I look like a google chrome extension...')
-  let url = feelingObj['IdkYouTellMe'][getRandomInt()]
+document.getElementById('idkYouTellMe').addEventListener('click', function () {
+  //alert('what do I look like a google chrome extension...')
+  let url = feelingObj['idkYouTellMe'][0]
   console.log(url)
   window.open(url, "_self")
 })
@@ -84,6 +82,30 @@ document.getElementById('annoyed').addEventListener('click', function () {
   };
   document.style.cursor = 'default';
 })
-});
+
+
+/*
+figure out why we aren't getting any action after clicking the chrome extension 
+load more references for each array, maybe there are 5 links for each
+create psuedoclasses where maybe images pop up on their respective buttons after we hover over them
+css styling
+API get request takes us to random websit
+
+
+
+1.still need to get the links to open when the event listeners are called
+2. to delete all stuff on page:
+
+
+
+
+
+
+document.addEventListener('DOMContentLoaded', () => {}
+
+
+
+
+*/
 
 
